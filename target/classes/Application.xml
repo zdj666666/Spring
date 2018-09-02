@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+		<!--这是第一种方式通过构造器构建  -->
+		<!--id相当于定义的类名,    class相当于将要交给Spring管理的类的路径  --> 
+	    <bean id="helloWorld" class="com.zdj.create.HelloWorld"></bean>	
+
+	    <!--这是第二种方式通过使用静态工厂创建bean对象  -->
+        <!--告诉Spring容器:我在com.zdj.四月二十八号.testSpringTwo下创建了一个静态方法getStaticInstance  -->
+		<bean id="StaticFactoryMethod" class="com.zdj.create.StaticFactory" factory-method="getStaticInstance"></bean>
+
+		<!--这是第三种通过使用实例工厂方法  -->
+		<bean id="InstanceFactory" class="com.zdj.create.InstanceFactory"></bean>
+		<bean id="getInstanceFactory" factory-bean="InstanceFactory" factory-method="getInstanceFactory"></bean>
+		
+		
+		
+</beans>
