@@ -4,7 +4,7 @@ package com.zdj.create;
 public class InstanceFactory {
  public InstanceFactory getInstance(){
 		 
-		 System.out.println("这里使用的是实例工厂方法");	
+
          return new InstanceFactory();
 
       }
